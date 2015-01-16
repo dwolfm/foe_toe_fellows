@@ -280,6 +280,7 @@ class ViewController: UIViewController, ImageSelectedProtocol, UICollectionViewD
             let compViewControler = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
             compViewControler.addImage(self.mainImageView.image)
             self.presentViewController(compViewControler, animated: true, completion: nil)
+            // test
         }
         
     }
