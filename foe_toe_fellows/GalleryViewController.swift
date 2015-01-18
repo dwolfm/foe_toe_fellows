@@ -18,6 +18,7 @@ class GalleryViewController: UIViewController, UICollectionViewDataSource ,UICol
     var collectionViewFlowLayout : UICollectionViewFlowLayout!
     var images: [UIImage] = []
     var delagate: ImageSelectedProtocol?
+    var pinch: UIPinchGestureRecognizer!
 
     
     override func loadView() {
@@ -48,6 +49,8 @@ class GalleryViewController: UIViewController, UICollectionViewDataSource ,UICol
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
         
+        self.pinch = UIPinchGestureRecognizer(target: self, action: "pinchGesture:")
+        self.collectionView.addGestureRecognizer(self.pinch)
         //MARK: register gallery cell class with reuse identifiers
         self.collectionView.registerClass(GalleryCell.self, forCellWithReuseIdentifier: "CELL")
         
@@ -79,6 +82,42 @@ class GalleryViewController: UIViewController, UICollectionViewDataSource ,UICol
     //MARK: cornform to UICollectionViewDelagate
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         delagate?.controllerDidSelectImgae(images[indexPath.row])
+    }
+    
+    //MARK: get the pinches to wrk
+    func pinchGesture(sender: UIPinchGestureRecognizer){
+        switch sender.state {
+        case .Began:
+            println("galery pinch began")
+        case .Changed:
+            println("galler pinch changed")
+        case .Ended:
+            println("pinch Ended")
+            if self.collectionViewFlowLayout.itemSize.height < self.view.bounds.width / 2 {
+                self.collectionView.performBatchUpdates({ () -> Void in
+                    if sender.velocity > 0{
+                        let largeSize = CGSize(width: self.collectionViewFlowLayout.itemSize.width * 2, height: self.collectionViewFlowLayout.itemSize.height * 2)
+                        self.collectionViewFlowLayout.itemSize = largeSize
+                    }
+
+                }, completion: { (finished) -> Void in
+                    //ah
+                })
+            } else if collectionViewFlowLayout.itemSize.height > self.view.bounds.width / 4  {
+                self.collectionView.performBatchUpdates({ () -> Void in
+                    if sender.velocity < 0 {
+                        let normalSize = CGSize(width: self.collectionViewFlowLayout.itemSize.width / 2, height: self.collectionViewFlowLayout.itemSize.height / 2)
+                        self.collectionViewFlowLayout.itemSize = normalSize
+                    }
+                }, completion: { (finished) -> Void in
+                    // ah
+                })
+            }
+            
+        default:
+            println("default case")
+        }
+
     }
 
 

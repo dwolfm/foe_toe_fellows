@@ -27,13 +27,11 @@ class ViewController: UIViewController, ImageSelectedProtocol, UICollectionViewD
     var gpuContext :CIContext!
     var filterSelercted: String?
     var shareButton : UIBarButtonItem!
-
-    
-    
     
     override func loadView() {
         //MARK: initialize a view to be the rootView
         let rootView = UIView(frame: UIScreen.mainScreen().bounds)
+        
         
         //MARK: add subviews to root view\
         
@@ -128,8 +126,12 @@ class ViewController: UIViewController, ImageSelectedProtocol, UICollectionViewD
             self.alertController.addAction(cameraOption)
         }
         let photoOption = UIAlertAction(title: "Photos", style: .Default) { (action) -> Void in
-            println("photos selected")
+            // fotos selected
+            let photoViewController = PhotosViewController()
+            photoViewController.delegate = self 
+            self.navigationController?.pushViewController(photoViewController, animated: true)
         }
+        self.alertController.addAction(photoOption)
         let cancelOption = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel) { (action) -> Void in
             println()
             self.navigationController?.popToRootViewControllerAnimated(true)
@@ -241,15 +243,15 @@ class ViewController: UIViewController, ImageSelectedProtocol, UICollectionViewD
         let selectedCell = collectionView.cellForItemAtIndexPath(indexPath)?
         selectedCell?.layer.borderWidth = 0
     }
-    
-    
     func filterSelected(){
         println("filterSelected")
         self.navigationController?.popToRootViewControllerAnimated(true)
+        if self.filterSelercted != nil {
         self.generateFilteredImage()
-        for i in 0...filterNames.count {
-            self.collectionView.cellForItemAtIndexPath(NSIndexPath(forItem: i, inSection: 0))?.layer.borderWidth = 0
-            
+            for i in 0...filterNames.count {
+                self.collectionView.cellForItemAtIndexPath(NSIndexPath(forItem: i, inSection: 0))?.layer.borderWidth = 0
+                
+            }
         }
         self.collectionYConstraint.constant = -120
         self.photoButtonYConstratint.constant = self.view.bounds.height/2 - 30

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C415D1111A691050002E2291 /* foe_toe_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C415D1101A691050002E2291 /* foe_toe_icon.png */; };
+		C42D29831A6B4B1E004E3B36 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C42D29851A6B4B1E004E3B36 /* Localizable.strings */; };
 		C44BC2C01A68F8F700760BB2 /* astronaut1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C44BC2B21A68F8F700760BB2 /* astronaut1.jpg */; };
 		C44BC2C11A68F8F700760BB2 /* astronaut10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C44BC2B31A68F8F700760BB2 /* astronaut10.jpg */; };
 		C44BC2C21A68F8F700760BB2 /* astronaut11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C44BC2B41A68F8F700760BB2 /* astronaut11.jpg */; };
@@ -24,6 +25,7 @@
 		C44BC2CD1A68F8F700760BB2 /* astronaut9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C44BC2BF1A68F8F700760BB2 /* astronaut9.jpg */; };
 		C44BC2CF1A69065C00760BB2 /* foeToeButtonTwo.png in Resources */ = {isa = PBXBuildFile; fileRef = C44BC2CE1A69065C00760BB2 /* foeToeButtonTwo.png */; };
 		C44BC2D11A69070C00760BB2 /* foeToeButtonThree.png in Resources */ = {isa = PBXBuildFile; fileRef = C44BC2D01A69070C00760BB2 /* foeToeButtonThree.png */; };
+		C455FD3D1A69C6BC001CF08F /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C455FD3C1A69C6BC001CF08F /* PhotosViewController.swift */; };
 		C4BA271C1A6925D700BC46F7 /* foeToeSplash.png in Resources */ = {isa = PBXBuildFile; fileRef = C4BA271B1A6925D700BC46F7 /* foeToeSplash.png */; };
 		C4BA271E1A69369600BC46F7 /* Thumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BA271D1A69369600BC46F7 /* Thumbnail.swift */; };
 		C4D5126E1A68BDC2003B6A11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D5126D1A68BDC2003B6A11 /* AppDelegate.swift */; };
@@ -48,6 +50,9 @@
 
 /* Begin PBXFileReference section */
 		C415D1101A691050002E2291 /* foe_toe_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = foe_toe_icon.png; sourceTree = "<group>"; };
+		C42D29841A6B4B1E004E3B36 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C42D29861A6B4B21004E3B36 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C43229261A6B479E006182ED /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		C44BC2B21A68F8F700760BB2 /* astronaut1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = astronaut1.jpg; sourceTree = "<group>"; };
 		C44BC2B31A68F8F700760BB2 /* astronaut10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = astronaut10.jpg; sourceTree = "<group>"; };
 		C44BC2B41A68F8F700760BB2 /* astronaut11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = astronaut11.jpg; sourceTree = "<group>"; };
@@ -64,6 +69,7 @@
 		C44BC2BF1A68F8F700760BB2 /* astronaut9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = astronaut9.jpg; sourceTree = "<group>"; };
 		C44BC2CE1A69065C00760BB2 /* foeToeButtonTwo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = foeToeButtonTwo.png; sourceTree = "<group>"; };
 		C44BC2D01A69070C00760BB2 /* foeToeButtonThree.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = foeToeButtonThree.png; sourceTree = "<group>"; };
+		C455FD3C1A69C6BC001CF08F /* PhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 		C4BA271B1A6925D700BC46F7 /* foeToeSplash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = foeToeSplash.png; sourceTree = "<group>"; };
 		C4BA271D1A69369600BC46F7 /* Thumbnail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Thumbnail.swift; sourceTree = "<group>"; };
 		C4D512681A68BDC2003B6A11 /* foe_toe_fellows.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = foe_toe_fellows.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,6 +132,7 @@
 		C4D5125F1A68BDC2003B6A11 = {
 			isa = PBXGroup;
 			children = (
+				C42D29851A6B4B1E004E3B36 /* Localizable.strings */,
 				C4D5126A1A68BDC2003B6A11 /* foe_toe_fellows */,
 				C4D512801A68BDC2003B6A11 /* foe_toe_fellowsTests */,
 				C4D512691A68BDC2003B6A11 /* Products */,
@@ -148,6 +155,7 @@
 			children = (
 				C4D5126D1A68BDC2003B6A11 /* AppDelegate.swift */,
 				C4D5126F1A68BDC2003B6A11 /* ViewController.swift */,
+				C455FD3C1A69C6BC001CF08F /* PhotosViewController.swift */,
 				C4BA271D1A69369600BC46F7 /* Thumbnail.swift */,
 				C4D5128F1A68D63B003B6A11 /* GalleryViewController.swift */,
 				C4D512911A68DD24003B6A11 /* GalleryCell.swift */,
@@ -246,6 +254,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = C4D5125F1A68BDC2003B6A11;
 			productRefGroup = C4D512691A68BDC2003B6A11 /* Products */;
@@ -276,6 +285,7 @@
 				C44BC2D11A69070C00760BB2 /* foeToeButtonThree.png in Resources */,
 				C44BC2C61A68F8F700760BB2 /* astronaut2.jpg in Resources */,
 				C44BC2C81A68F8F700760BB2 /* astronaut4.jpg in Resources */,
+				C42D29831A6B4B1E004E3B36 /* Localizable.strings in Resources */,
 				C44BC2C41A68F8F700760BB2 /* astronaut13.jpg in Resources */,
 				C44BC2CB1A68F8F700760BB2 /* astronaut7.jpg in Resources */,
 				C44BC2CF1A69065C00760BB2 /* foeToeButtonTwo.png in Resources */,
@@ -304,6 +314,7 @@
 				C4D512921A68DD24003B6A11 /* GalleryCell.swift in Sources */,
 				C4D512901A68D63B003B6A11 /* GalleryViewController.swift in Sources */,
 				C4D512701A68BDC2003B6A11 /* ViewController.swift in Sources */,
+				C455FD3D1A69C6BC001CF08F /* PhotosViewController.swift in Sources */,
 				C4BA271E1A69369600BC46F7 /* Thumbnail.swift in Sources */,
 				C4D5126E1A68BDC2003B6A11 /* AppDelegate.swift in Sources */,
 			);
@@ -328,10 +339,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		C42D29851A6B4B1E004E3B36 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C42D29841A6B4B1E004E3B36 /* en */,
+				C42D29861A6B4B21004E3B36 /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		C4D512761A68BDC2003B6A11 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				C4D512771A68BDC2003B6A11 /* Base */,
+				C43229261A6B479E006182ED /* es */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
